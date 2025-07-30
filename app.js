@@ -1,11 +1,16 @@
-let boxes = document.querySelectorAll(".box");
-let resetBtn = document.querySelector("#reset-btn");
-let newGameBtn = document.querySelector("#new-btn");
-let msgContainer = document.querySelector(".msg-container");
-let msg = document.querySelector("#msg");
+import tkinter as tk
+from tkinter import messagebox
 
-let turnO = true; //playerX, playerO
-let count = 0; //To Track Draw
+# Initialize main window
+root = tk.Tk()
+root.title("Tic Tac Toe")
+root.configure(bg="#548687")
+
+# Global variables
+current_player = "O"
+buttons = []
+move_count = 0
+
 
 const winPatterns = [
   [0, 1, 2],
